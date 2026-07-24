@@ -88,8 +88,8 @@
 
   /* --primary: oklch(0.55 0.15 143); */
   --primary-foreground: oklch(1 0 0);
-  /* --primary-glow: oklch(0.68 0.17 143); */
-  /* --primary-deep: oklch(0.46 0.13 143); */
+  --primary-glow: oklch(0.68 0.17 143);
+  --primary-deep: oklch(0.46 0.13 143);
 
   --secondary: oklch(0.965 0.02 143);
   --secondary-foreground: oklch(0.28 0.09 143);

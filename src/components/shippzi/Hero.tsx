@@ -1,15 +1,13 @@
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { Play, ArrowRight, ClipboardList, Truck, PackageCheck, Package } from "lucide-react";
-import heroImg from "@/assets/hero-delivery.jpg";
+import heroImg from "@/assets/hero-delivery.png";
 
 const brands = [
-  "more RETAIL",
-  "DMart",
   "Apollo",
   "Swiggy",
-  "Zepto",
-  "bigbasket",
+  "Flipkart",
+  "Quiklee",
   "KPN Fresh",
   "Vijetha",
   "Heritage",
@@ -38,9 +36,9 @@ function useLiveFluctuate(base: number, variance: number, intervalMs: number) {
 }
 
 export function Hero() {
-  const assignedToday = useLiveCounter(1284, 1, 3, 20000);
-  const liveToday = useLiveFluctuate(342, 12, 20000);
-  const overallDelivered = useLiveCounter(2603842, 1, 4, 20000);
+  const assignedToday = useLiveCounter(1284, 1, 3, 5000);
+  const liveToday = useLiveFluctuate(342, 12, 5000);
+  const overallDelivered = useLiveCounter(2603842, 1, 4, 10000);
   const liveStats = [
     {
       icon: ClipboardList,
@@ -64,10 +62,10 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <h1 className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight text-foreground md:text-6xl lg:text-7xl">
-            Deliver Anything.
+          <h1 className="mt-6 text-5xl font-bold leading-[1.05] tracking-tight text-foreground md:text-6xl lg:text-7xl">
+            You Focus on Business.We Take Care of
             <br />
-            <span className="text-gradient">Anywhere.</span>
+            <span className="text-gradient"> Deliveries</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
             AI-powered last-mile delivery platform for Enterprises, Retail, Grocery, Pharmacy,
@@ -84,16 +82,6 @@ export function Hero() {
               Book a Demo
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </motion.a>
-            <motion.button
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center gap-2 rounded-full border border-border bg-background/80 px-5 py-3 text-sm font-semibold text-foreground backdrop-blur hover:bg-background"
-            >
-              <span className="grid h-7 w-7 place-items-center rounded-full bg-primary/10 text-primary">
-                <Play className="h-3.5 w-3.5 fill-current" />
-              </span>
-              Watch Video
-            </motion.button>
           </div>
 
           <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-3">
@@ -182,7 +170,7 @@ export function Hero() {
               <div className="h-9 w-9 rounded-full bg-gradient-primary" />
               <div>
                 <div className="text-xs font-semibold text-foreground">Rider assigned</div>
-                <div className="text-[10px] text-muted-foreground">Ravi K · 2.1 km away</div>
+                <div className="text-[10px] text-muted-foreground">Raider is 2.1 km away</div>
               </div>
             </div>
           </motion.div>

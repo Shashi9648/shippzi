@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Phone, MessageCircle, Mail, ArrowRight } from "lucide-react";
 import { toast } from "sonner";
 
+
 const brands = ["more RETAIL", "DMart", "Apollo", "Swiggy", "Zepto", "bigbasket"];
 
 export function Contact() {
